@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "454003595561",
+    "firebase_url": "https://tiendavirtual-63284.firebaseio.com",
+    "project_id": "tiendavirtual-63284",
+    "storage_bucket": "tiendavirtual-63284.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454003595561:android:ae026d9152700680cebf38",
+        "android_client_info": {
+          "package_name": "com.luz.admin.proyecto.tienda.virtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454003595561-mc5mdc94i8ac19h57qk90d8dpm1ammi9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luz.admin.proyecto.tienda.virtual",
+            "certificate_hash": "21ffad4a7a2c35e9f65e7c9a850352dd10b8bdd6"
+          }
+        },
+        {
+          "client_id": "454003595561-t95hu5u77v2tvol95qi6p1vbik6feg1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwcpaRQqNLb1OI3wBR7kYohb8YvQnyzbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454003595561-t95hu5u77v2tvol95qi6p1vbik6feg1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

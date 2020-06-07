@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Inicio - Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="#FCF3FD"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:src="@drawable/shop_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login Shop "
+                android:textColor="#04167C"
+                android:textSize="45dp"
+                android:textStyle="bold|italic|normal" />
+
+        </LinearLayout>
+        <!-- Fin - Body -->
+
+        <!-- Inicio - Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_login"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtTxtUser"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint=" Usuario : "
+                android:textColor="#04167C"
+                android:textStyle="bold|italic"
+                android:color="@android:color/holo_purple"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/edtTxtPassword"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint=" Clave : "
+                android:textColor="#04167C"
+                android:textStyle="bold|italic"
+                android:color="@android:color/holo_purple"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:id="@+id/bttnEnterLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold|italic"
+                android:background="@android:color/holo_purple"
+                android:text=" Enter "
+                android:onClick="onEnterLogin" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/TextView1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="¿Olvidaste tu contraseña?"
+                android:textColor="#000000"
+                android:textStyle="bold|italic"
+                android:autoLink="all" />
+
+        </LinearLayout>
+        <!-- Fin - Body -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

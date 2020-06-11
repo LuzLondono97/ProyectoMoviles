@@ -1,11 +1,8 @@
 package com.luz.admin.proyecto.tienda.virtual.room_database.producto
 
 import android.graphics.Bitmap
-import androidx.annotation.NonNull
-import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity (tableName = "producto_table")

@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.luz.admin.proyecto.tienda.virtual.repository.ProductoRepository
 import com.luz.admin.proyecto.tienda.virtual.room_database.producto.Producto
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class ProductoViewModel (application: Application) : AndroidViewModel(application) {
 
@@ -18,7 +20,21 @@ class ProductoViewModel (application: Application) : AndroidViewModel(applicatio
     }
 
     fun insert(producto: Producto){
-        //viewModelScope
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.insert(producto)
+        }
+    }
+
+    fun deleteProducto(producto: Producto) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteProducto(producto)
+        }
+    }
+
+    fun deleteAll() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAll()
+        }
     }
 
 }

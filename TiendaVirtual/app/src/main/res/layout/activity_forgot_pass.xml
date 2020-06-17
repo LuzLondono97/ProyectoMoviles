@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".ForgotPassActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,14 +24,14 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
-                android:layout_height="110dp"
+                android:layout_height="105dp"
                 android:src="@drawable/shop_logo"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Sign Up Shop "
+                android:text=" Recuperar Contraseña "
                 android:textColor="#04167C"
-                android:textSize="45dp"
+                android:textSize="35dp"
                 android:textStyle="bold|italic|normal" />
 
         </LinearLayout>
@@ -49,7 +49,7 @@
                 android:background="@drawable/fondo_login"
                 android:gravity="center"
                 android:orientation="vertical">
-<!--   -->
+                <!--   -->
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -64,74 +64,29 @@
                     android:layout_height="20dp" />
 
                 <EditText
-                    android:id="@+id/edtTxtNombres"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint=" Nombres : "
-                    android:textColor="#04167C"
-                    android:textStyle="bold|italic"
-                    android:color="@android:color/holo_purple"/>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <EditText
-                    android:id="@+id/edtTxtApellidos"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint=" Apellidos : "
-                    android:textColor="#04167C"
-                    android:textStyle="bold|italic"
-                    android:color="@android:color/holo_purple"/>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <EditText
                     android:id="@+id/edtTxtEmail"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:hint=" Email : "
-                    android:textColor="#04167C"
-                    android:textStyle="bold|italic"
-                    android:color="@android:color/holo_purple" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <EditText
-                    android:id="@+id/edtTxtPassword"
-                    android:layout_width="350dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPassword"
-                    android:hint=" Clave : "
                     android:textColor="#04167C"
                     android:textStyle="bold|italic"
                     android:color="@android:color/holo_purple"/>
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="50dp" />
 
                 <Button
-                    android:id="@+id/bttnRegistry"
+                    android:id="@+id/bttnSend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
                     android:textStyle="bold|italic"
                     android:background="@android:color/holo_purple"
-                    android:text=" Registrarse "
-                    android:onClick="register" />
+                    android:text=" Enviar Contraseña "
+                    android:onClick="send" />
 
                 <Space
                     android:layout_width="match_parent"

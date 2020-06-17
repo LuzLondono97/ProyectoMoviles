@@ -1,7 +1,9 @@
 package com.luz.admin.proyecto.tienda.virtual
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -28,6 +30,21 @@ class HomeActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun onProducto (view : View) {
+        val enter = Intent(this, ProductoFragment::class.java)
+        startActivity(enter)
+    }
+
+    fun onCompra (view : View) {
+        val enter = Intent(this, CompraFragment::class.java)
+        startActivity(enter)
+    }
+
+    fun onCerrarSesion (view : View) {
+        val enter = Intent(this, LoginActivity::class.java)
+        startActivity(enter)
     }
 
 }

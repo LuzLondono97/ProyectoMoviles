@@ -52,7 +52,8 @@
                 android:background="@android:color/holo_purple"
                 android:text=" Producto "
                 android:textColor="#000000"
-                android:textStyle="bold|italic" />
+                android:textStyle="bold|italic"
+                android:onClick="onProducto" />
 
             <Space
                 android:layout_width="match_parent"
@@ -65,7 +66,8 @@
                 android:background="@android:color/holo_purple"
                 android:text=" Comprar "
                 android:textColor="#000000"
-                android:textStyle="bold|italic" />
+                android:textStyle="bold|italic"
+                android:onClick="onCompra" />
 
             <Space
                 android:layout_width="match_parent"
@@ -78,7 +80,8 @@
                 android:background="@android:color/holo_purple"
                 android:text=" Cerrar Sesión "
                 android:textColor="#000000"
-                android:textStyle="bold|italic" />
+                android:textStyle="bold|italic"
+                android:onClick="onCerrarSesion" />
 
         </LinearLayout>
         <!-- Productos -->

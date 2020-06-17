@@ -52,6 +52,10 @@ public abstract class ProductoDatabase : RoomDatabase() {
 
             var producto = Producto(0,"Vestido Rojo", "Nuevo, marca Studio F", 150000)
             productoDAO.insert(producto)
+            var producto1 = Producto(1,"Bolso Pequeño Negro", "Nuevo, marca Studio F", 210000)
+            productoDAO.insert(producto1)
+            var producto2 = Producto(2,"Baletas Negras", "Nuevo, marca Studio F, Talla 37.5", 250000)
+            productoDAO.insert(producto2)
         }
 
     }

@@ -1,19 +1,14 @@
 package com.luz.admin.proyecto.tienda.virtual.repository
 
 import android.app.Application
-import androidx.lifecycle.LiveData
 import com.luz.admin.proyecto.tienda.virtual.room_database.compra.Compra
-import com.luz.admin.proyecto.tienda.virtual.room_database.compra.CompraDatabase
-import kotlinx.coroutines.CoroutineScope
+import com.luz.admin.proyecto.tienda.virtual.room_database.TiendaDatabase
 
-class CompraRepository(application: Application, viewModelScope: CoroutineScope) {
+class CompraRepository(application: Application) {
 
-    private val compraDAO = CompraDatabase.getDatabase(
-        application,
-        viewModelScope
-    ).compraDAO()
+    private val compraDAO = TiendaDatabase.getInstance(application).compraDAO()
 
-    val allCompras: LiveData<List<Compra>> = compraDAO.getCompraById()
+    fun getAll() = compraDAO.getAll()
 
     suspend fun insert(compra: Compra) {
         compraDAO.insert(compra)
@@ -26,5 +21,4 @@ class CompraRepository(application: Application, viewModelScope: CoroutineScope)
     suspend fun deleteAll() {
         compraDAO.deleteAll()
     }
-
 }

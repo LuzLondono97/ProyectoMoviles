@@ -9,17 +9,17 @@ import com.luz.admin.proyecto.tienda.virtual.room_database.producto.Producto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ProductoViewModel (application: Application) : AndroidViewModel(application) {
+class ProductoViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: ProductoRepository
     val allProductos: LiveData<List<Producto>>
 
     init {
-        repository = ProductoRepository(application, viewModelScope)
+        repository = ProductoRepository(application)
         allProductos = repository.allProductos
     }
 
-    fun insert(producto: Producto){
+    fun insert(producto: Producto) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(producto)
         }
@@ -36,5 +36,4 @@ class ProductoViewModel (application: Application) : AndroidViewModel(applicatio
             repository.deleteAll()
         }
     }
-
 }

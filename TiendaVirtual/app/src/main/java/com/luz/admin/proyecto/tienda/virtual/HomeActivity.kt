@@ -33,12 +33,12 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun onProducto (view : View) {
-        val enter = Intent(this, ProductoFragment::class.java)
+        val enter = Intent(this, ProductoActivity::class.java)
         startActivity(enter)
     }
 
     fun onCompra (view : View) {
-        val enter = Intent(this, CompraFragment::class.java)
+        val enter = Intent(this, CompraActivity::class.java)
         startActivity(enter)
     }
 

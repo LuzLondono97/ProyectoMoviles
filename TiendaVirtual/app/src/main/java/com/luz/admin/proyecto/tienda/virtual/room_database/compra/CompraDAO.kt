@@ -8,7 +8,7 @@ import com.luz.admin.proyecto.tienda.virtual.room_database.compra.Compra
 interface CompraDAO {
 
     @Query("SELECT * FROM compra_table ORDER BY productoID, usuarioID ASC")
-    fun getCompraById(): LiveData<List<Compra>>
+    fun getAll(): LiveData<List<Compra>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(compra: Compra)

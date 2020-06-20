@@ -9,17 +9,17 @@ import com.luz.admin.proyecto.tienda.virtual.room_database.compra.Compra
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class CompraViewModel (application: Application) : AndroidViewModel(application) {
+class CompraViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: CompraRepository
     val allCompras: LiveData<List<Compra>>
 
     init {
-        repository = CompraRepository(application, viewModelScope)
-        allCompras = repository.allCompras
+        repository = CompraRepository(application)
+        allCompras = repository.getAll()
     }
 
-    fun insert(compra: Compra){
+    fun insert(compra: Compra) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(compra)
         }
@@ -36,5 +36,4 @@ class CompraViewModel (application: Application) : AndroidViewModel(application)
             repository.deleteAll()
         }
     }
-
 }

@@ -2,18 +2,13 @@ package com.luz.admin.proyecto.tienda.virtual.repository
 
 import android.app.Application
 import androidx.lifecycle.LiveData
+import com.luz.admin.proyecto.tienda.virtual.room_database.TiendaDatabase
 import com.luz.admin.proyecto.tienda.virtual.room_database.producto.Producto
-import com.luz.admin.proyecto.tienda.virtual.room_database.producto.ProductoDatabase
-import kotlinx.coroutines.CoroutineScope
 
-class ProductoRepository(application: Application, viewModelScope: CoroutineScope) {
+class ProductoRepository(application: Application) {
 
-    private val productoDAO = ProductoDatabase.getDatabase(
-        application,
-        viewModelScope
-    ).productoDAO()
-
-    val allProductos: LiveData<List<Producto>> = productoDAO.getProductoByNombre()
+    private val productoDAO = TiendaDatabase.getInstance(application).productoDAO()
+    val allProductos: LiveData<List<Producto>> = productoDAO.getAll()
 
     suspend fun insert(producto: Producto) {
         productoDAO.insert(producto)
@@ -26,5 +21,4 @@ class ProductoRepository(application: Application, viewModelScope: CoroutineScop
     suspend fun deleteAll() {
         productoDAO.deleteAll()
     }
-
 }

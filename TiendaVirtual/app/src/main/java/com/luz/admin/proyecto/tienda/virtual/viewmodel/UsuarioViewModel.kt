@@ -9,17 +9,17 @@ import com.luz.admin.proyecto.tienda.virtual.room_database.usuario.Usuario
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class UsuarioViewModel (application: Application) : AndroidViewModel(application) {
+class UsuarioViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: UsuarioRepository
     val allUsuarios: LiveData<List<Usuario>>
 
     init {
-        repository = UsuarioRepository(application, viewModelScope)
+        repository = UsuarioRepository(application)
         allUsuarios = repository.allUsuarios
     }
 
-    fun insert(usuario: Usuario){
+    fun insert(usuario: Usuario) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.insert(usuario)
         }
@@ -36,5 +36,4 @@ class UsuarioViewModel (application: Application) : AndroidViewModel(application
             repository.deleteAll()
         }
     }
-
 }

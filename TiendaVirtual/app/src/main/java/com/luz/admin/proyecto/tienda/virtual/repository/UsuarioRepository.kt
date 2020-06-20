@@ -2,17 +2,12 @@ package com.luz.admin.proyecto.tienda.virtual.repository
 
 import android.app.Application
 import androidx.lifecycle.LiveData
+import com.luz.admin.proyecto.tienda.virtual.room_database.TiendaDatabase
 import com.luz.admin.proyecto.tienda.virtual.room_database.usuario.Usuario
-import com.luz.admin.proyecto.tienda.virtual.room_database.usuario.UsuarioDatabase
-import kotlinx.coroutines.CoroutineScope
 
-class UsuarioRepository(application: Application, viewModelScope: CoroutineScope) {
+class UsuarioRepository(application: Application) {
 
-    private val usuarioDAO = UsuarioDatabase.getDatabase(
-        application,
-        viewModelScope
-    ).usuarioDAO()
-
+    private val usuarioDAO = TiendaDatabase.getInstance(application).usuarioDAO()
     val allUsuarios: LiveData<List<Usuario>> = usuarioDAO.getUsuarioByNombre()
 
     suspend fun insert(usuario: Usuario) {

@@ -6,4 +6,8 @@ class Product (
     val titulo: String,
     val descripcion: String,
     val precio: Int
-)
+){
+    constructor() : this("","","",0){
+
+    }
+}

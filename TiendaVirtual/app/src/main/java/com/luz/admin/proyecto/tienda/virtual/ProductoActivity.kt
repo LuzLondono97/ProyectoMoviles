@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.luz.admin.proyecto.tienda.virtual.model.Product
 
@@ -16,9 +17,13 @@ class ProductoActivity : AppCompatActivity() {
     private lateinit var txtPrecio: EditText
     private lateinit var buttonRegistrar: Button
 
+    lateinit var ref: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_producto)
+
+        ref = FirebaseDatabase.getInstance().getReference("Producto")
 
         txtTitulo = findViewById(R.id.edtTxtTitulo)
         txtDescripcion = findViewById(R.id.edtTxtDescripcion)
@@ -49,7 +54,6 @@ class ProductoActivity : AppCompatActivity() {
         }
 
 
-        val ref = FirebaseDatabase.getInstance().getReference("Producto")
         val productId = ref.push().key
         val product = Product(productId.toString(), titulo, descripcion, precio)
 
